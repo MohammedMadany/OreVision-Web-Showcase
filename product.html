@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed information about minerals available at OreVision Hub, including specifications and inquiry options.">
+    <meta name="keywords" content="mineral sorting, AI, mining, OreVision Hub, Egypt">
+    <title>Product Details - OreVision Hub</title>
+    <!-- Favicon using OreVision logo -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <!-- Bootstrap CSS for responsive layout (switches to RTL for Arabic) -->
+    <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons (e.g., payment methods, social media) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Roboto) for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for OreVision styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <!-- Logo linking to homepage; replace images/logo.png with your square logo -->
+            <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="OreVision Logo" height="70"></a>
+            <!-- Toggler for mobile navigation -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Navigation links aligned to the right -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#home" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#about" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#technology" data-i18n="technology">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#benefits" data-i18n="benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="hub.html" data-i18n="hub">OreVision Hub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detect.html" data-i18n="detect">Detect Minerals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact" data-i18n="contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html" data-i18n="register">Register</a></li>
+                </ul>
+                <!-- Language switcher dropdown -->
+                <select id="language-switcher" class="form-select language-select ms-3">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Details Section -->
+    <section id="product-details" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <!-- Product name, dynamically populated -->
+            <h2 id="product-name" class="text-center mb-4"></h2>
+            <div class="row">
+                <!-- Product image -->
+                <div class="col-md-6 mb-4">
+                    <img id="product-image" src="" alt="Product Image" class="img-fluid rounded shadow" loading="lazy">
+                </div>
+                <!-- Product details -->
+                <div class="col-md-6">
+                    <p id="product-description" class="lead"></p>
+                    <h3 data-i18n="specifications">Specifications</h3>
+                    <ul id="product-specifications" class="list-unstyled mb-4"></ul>
+                    <h3 data-i18n="price">Price</h3>
+                    <p id="product-price" class="fw-bold mb-4"></p>
+                    <h3 data-i18n="payment_options">Payment Options</h3>
+                    <p class="mb-4">
+                        <i class="fas fa-university me-2"></i> Bank Transfer
+                        <i class="fas fa-credit-card ms-3 me-2"></i> Credit Card
+                        <i class="fas fa-money-check-alt ms-3 me-2"></i> Installments (contact for details)
+                    </p>
+                    <h3 data-i18n="inquiry">Request Form</h3>
+                    <!-- Inquiry form for bulk orders -->
+                    <form id="inquiry-form" action="https://formspree.io/f/xkgrlkkj" method="POST">
+                        <input type="hidden" name="product_id" id="product_id">
+                        <div class="mb-3">
+                            <label for="company_name" class="form-label" data-i18n="company_name">Company Name*</label>
+                            <input type="text" class="form-control" id="company_name" name="company_name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contact_person" class="form-label" data-i18n="contact_person">Contact Person*</label>
+                            <input type="text" class="form-control" id="contact_person" name="contact_person" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label" data-i18n="email">Email*</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label" data-i18n="phone">Phone Number*</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label" data-i18n="location">Manufacturing Location*</label>
+                            <input type="text" class="form-control" id="location" name="location" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label" data-i18n="quantity">Quantity (tons)*</label>
+                            <select class="form-select" id="quantity" name="quantity" required>
+                                <option value="" data-i18n="select_quantity">Select quantity</option>
+                                <option value="120">120 tons</option>
+                                <option value="240">240 tons</option>
+                                <option value="360">360 tons</option>
+                                <option value="480">480 tons</option>
+                                <option value="600">600 tons</option>
+                                <option value="custom" data-i18n="custom_quantity">More than 600 tons</option>
+                            </select>
+                        </div>
+                        <div class="mb-3" id="custom-quantity-group" style="display: none;">
+                            <label for="custom_quantity" class="form-label" data-i18n="custom_quantity">Enter quantity (multiple of 120)*</label>
+                            <input type="number" class="form-control" id="custom_quantity" name="custom_quantity" min="720" step="120">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label" data-i18n="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" data-i18n="submit_inquiry">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 data-i18n="quick_links">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="index.html#home" class="text-white" data-i18n="home">Home</a></li>
+                        <li><a href="index.html#about" class="text-white" data-i18n="about">About</a></li>
+                        <li><a href="index.html#technology" class="text-white" data-i18n="technology">Technology</a></li>
+                        <li><a href="hub.html" class="text-white" data-i18n="hub">OreVision Hub</a></li>
+                        <li><a href="index.html#contact" class="text-white" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 data-i18n="follow_us">Follow Us</h5>
+                    <a href="https://www.linkedin.com/company/orevision/" target="_blank" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61571931276839" target="_blank" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/orevision/" target="_blank" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/orevision_eg" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p data-i18n="copyright">© 2025 OreVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn back-to-top" data-i18n="back_to_top">Top</button>
+
+    <!-- Bootstrap JS for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS with smooth animation settings
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <!-- Custom JS for dynamic functionality -->
+    <script src="scripts.js"></script>
+    <script>
+        // Load product details on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const language = localStorage.getItem('language') || 'en';
+            updateLanguage(language);
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+            loadProduct(productId, language);
+        });
+
+        // Handle quantity selection
+        document.getElementById('quantity').addEventListener('change', function() {
+            const customGroup = document.getElementById('custom-quantity-group');
+            if (this.value === 'custom') {
+                customGroup.style.display = 'block';
+                document.getElementById('custom_quantity').required = true;
+            } else {
+                customGroup.style.display = 'none';
+                document.getElementById('custom_quantity').required = false;
+            }
+        });
+
+        // Validate custom quantity on form submission
+        document.getElementById('inquiry-form').addEventListener('submit', function(event) {
+            const quantitySelect = document.getElementById('quantity');
+            if (quantitySelect.value === 'custom') {
+                const customQuantity = parseInt(document.getElementById('custom_quantity').value);
+                if (isNaN(customQuantity) || customQuantity % 120 !== 0) {
+                    event.preventDefault();
+                    alert(translations[localStorage.getItem('language') || 'en'].invalid_quantity);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

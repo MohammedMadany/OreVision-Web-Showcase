@@ -1,0 +1,601 @@
+/* Custom styles for OreVision website */
+
+/* Define global variables for consistent theming */
+:root {
+    --primary-color: #FF4200; /* Orange accent from logo */
+    --dark-bg: #041622; /* Logo background color */
+    --light-bg: #f8f9fa; /* Light background for contrast */
+    --text-color: #333; /* Default text color */
+    --white: #fff; /* White for text on dark backgrounds */
+}
+
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: var(--dark-bg) !important;
+    padding: 0.1rem 0;
+}
+
+/* Ensure logo is square and properly sized */
+.navbar-brand img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+/* Navigation links */
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+}
+
+/* Language switcher styling */
+#language-switcher {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Styling for language select box */
+.language-select {
+    width: 90px; /* Fixed width for consistency */
+    padding: 8px 30px 8px 12px; /* Padding for text and icon */
+    font-size: 1rem; /* Readable font size */
+    background-color: var(--white); /* White background */
+    border: 1px solid var(--primary-color); /* Orange border */
+    border-radius: 8px; /* Rounded corners */
+    appearance: none; /* Remove default browser styling */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path fill="%23FF4200" d="M6 9l4-5H2z"/></svg>'); /* Custom orange arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Position arrow */
+    cursor: pointer;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover and focus effects for language select */
+.language-select:hover,
+.language-select:focus {
+    border-color: #E65C00; /* Darker orange on hover/focus */
+    box-shadow: 0 0 5px rgba(255, 66, 0, 0.3); /* Subtle glow */
+    outline: none;
+}
+
+/* Ensure text alignment in RTL */
+[dir="rtl"] .language-select {
+    background-position: left 10px center; /* Adjust arrow for RTL */
+    padding: 8px 12px 8px 30px; /* Reverse padding for RTL */
+    text-align: right; /* Align text right for Arabic */
+}
+
+/* Hero section */
+.hero-section {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Dark overlay for hero section to improve text readability */
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Ensure hero content is above overlay */
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Hero section text */
+.hero-section h1,
+.hero-section p {
+    color: var(--white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom button styles */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #E65C00;
+    border-color: #E65C00;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 66, 0, 0.5);
+}
+
+
+/* Headings with orange accent */
+h1, h2, h3, h4 {
+    color: var(--primary-color);
+}
+
+/* Dark section styling */
+.bg-dark {
+    background-color: var(--dark-bg) !important;
+    color: var(--white);
+}
+
+/* Light section styling */
+.bg-light {
+    background-color: var(--light-bg) !important;
+}
+
+/* Product cards (hub.html) */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Product grid layout */
+#product-list .col-md-4 {
+    flex: 0 0 33.333%; /* Ensure 3 cards per row */
+    max-width: 33.333%;
+    padding: 15px; /* Spacing between cards */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #product-list .col-md-4 {
+        flex: 0 0 100%; /* Stack cards on mobile */
+        max-width: 100%;
+    }
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure card images are properly sized */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Product image in product.html */
+#product-image {
+    max-height: 400px;
+    object-fit: cover;
+}
+
+/* Form inputs */
+.form-control,
+.form-select {
+    border-radius: 10px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    transition: border-color 0.3s;
+}
+
+/* Contact form styling */
+.contact-form {
+    max-width: 800px; /* Limit form width */
+    margin: 0 auto; /* Center form */
+    padding: 20px; /* Inner spacing */
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle white background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Registration section styling */
+.registration-section {
+    max-width: 900px; /* Wider for form */
+    margin: 0 auto; /* Center */
+    padding: 30px; /* Padding */
+    background-color: var(--white); /* White background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Deeper shadow */
+    text-align: center; /* Center text */
+}
+
+/* Registration form */
+.registration-form {
+    padding: 20px; /* Inner padding */
+}
+
+/* Form labels */
+.registration-form .form-label {
+    font-weight: 700; /* Bolder labels */
+    color: var(--primary-color); /* Orange text */
+    margin-bottom: 10px; /* Space below */
+    display: block; /* Full width */
+}
+
+/* Form inputs and select */
+.registration-form .form-control,
+.registration-form .form-select {
+    border-radius: 10px; /* Rounded corners */
+    padding: 14px; /* Larger padding */
+    font-size: 1rem; /* Readable text */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Focus states */
+.registration-form .form-control:focus,
+.registration-form .form-select:focus {
+    border-color: var(--primary-color); /* Orange on focus */
+    box-shadow: 0 0 6px rgba(255, 66, 0, 0.4); /* Glow effect */
+}
+
+/* Checkbox styling */
+.registration-form .form-check-label {
+    color: #444; /* Dark gray text */
+    font-size: 0.95rem; /* Slightly smaller */
+    line-height: 1.5; /* Readable spacing */
+}
+
+/* Submit button */
+.registration-form .btn-primary {
+    width: 200px; /* Fixed width */
+    padding: 15px; /* Larger padding */
+    font-size: 1.2rem; /* Larger text */
+    border-radius: 10px; /* Rounded corners */
+    background-color: var(--primary-color); /* Orange */
+    border: none; /* No border */
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.registration-form .btn-primary:hover {
+    background-color: #E65C00; /* Darker orange */
+    transform: scale(1.05); /* Slight zoom */
+}
+
+/* Subtext styling */
+.subtext {
+    color: #666; /* Gray text */
+    font-size: 1.1rem; /* Readable */
+    margin-bottom: 30px; /* Space below */
+}
+
+/* RTL adjustments for form */
+[dir="rtl"] .registration-form .form-label,
+[dir="rtl"] .registration-form .form-control,
+[dir="rtl"] .registration-form .form-select,
+[dir="rtl"] .registration-form .form-check-label {
+    text-align: right; /* Right-align for Arabic */
+}
+
+/* Form labels */
+.contact-form .form-label {
+    font-weight: 600; /* Bold labels */
+    color: var(--white); /* White for dark background */
+    margin-bottom: 8px; /* Space below label */
+}
+
+/* Form inputs and textarea */
+.contact-form .form-control,
+.contact-form .form-select {
+    background-color: var(--white); /* White input background */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px; /* Comfortable padding */
+    color: var(--text-color); /* Dark text */
+}
+
+/* Detection Section */
+#detect .card {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+#detect .card:hover {
+    transform: translateY(-5px);
+}
+
+#detect .form-control {
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+#detect .form-control:focus {
+    box-shadow: 0 0 10px rgba(255, 66, 0, 0.3);
+    border-color: #E65C00;
+}
+
+#detection-results .card {
+    background-color: var(--white);
+    border-left: 6px solid var(--primary-color);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#detection-results .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+#detection-results .card-title {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+#detect-btn {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    border: none;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+}
+
+#detect-btn:hover {
+    background-color: #E65C00;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 66, 0, 0.5);
+}
+
+#detect-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+#loading-spinner .spinner-border {
+    width: 3rem;
+    height: 3rem;
+    color: var(--primary-color);
+}
+
+#loading-spinner p {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+#detection-results .alert {
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#detection-results .alert-warning {
+    background-color: #fff3cd;
+    border-left: 5px solid #ffcc00;
+    color: #856404;
+}
+
+#detection-results .alert-danger {
+    background-color: #f8d7da;
+    border-left: 5px solid #dc3545;
+    color: #721c24;
+}
+
+/* Enhanced Detection Results */
+.result-image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    max-height: 400px;
+}
+
+.result-image-card:hover {
+    transform: scale(1.05);
+}
+
+.result-image-card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+}
+
+.result-image-card:hover img {
+    transform: scale(1.1);
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.result-image-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay i {
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.detection-card {
+    border-radius: 10px;
+    background: linear-gradient(145deg, #ffffff, #f0f8f8);
+    border-left: 4px solid #ff4200;
+    padding: 15px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.detection-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background: #ff4200;
+    height: 100%;
+    transition: width 0.8s ease-in-out;
+}
+
+#confidence-chart {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+/* Submit button */
+.contact-form .btn-primary {
+    width: 200px; /* Fixed width */
+    padding: 12px; /* Larger padding */
+    font-size: 1.1rem; /* Larger text */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* RTL adjustments for form */
+[dir="rtl"] .contact-form .form-label,
+[dir="rtl"] .contact-form .form-control,
+[dir="rtl"] .contact-form .form-select {
+    text-align: right; /* Right-align for Arabic */
+}
+
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px #E65C00;
+}
+
+/* Footer styling */
+footer {
+    background-color: var(--dark-bg);
+}
+
+/* Social media icons with hover effect */
+footer a i {
+    font-size: 1.5rem;
+    transition: color 0.3s, transform 0.2s;
+}
+
+footer a i:hover {
+    color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+@media (max-width: 576px) {
+    footer .col-md-6 {
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+
+    footer .text-md-end {
+        text-align: center !important;
+    }
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px; /* Slightly higher position */
+    right: 30px; /* Consistent spacing */
+    background-color: var(--primary-color); /* Orange background */
+    border: none; /* Remove border */
+    border-radius: 50%; /* Fully circular */
+    width: 60px; /* Larger size */
+    height: 60px; /* Square for circle */
+    display: none; /* Hidden by default */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    color: var(--white); /* White text */
+    font-size: 1.1rem; /* Readable text */
+    font-weight: 700; /* Bold text */
+    box-shadow: 0 4px 8px #E65C00; /* Subtle shadow */
+    transition: background-color 0.3s, transform 0.2s, opacity 0.3s;
+    z-index: 1000; /* Ensure on top */
+}
+
+/* Hover effect for back to top button */
+.back-to-top:hover {
+    background-color: #E65C00; /* Darker orange */
+    transform: scale(1.1); /* Slight zoom */
+}
+
+/* Fade in effect when visible */
+.back-to-top.show {
+    display: flex; /* Use flex for centering */
+    opacity: 1;
+}
+
+/* RTL adjustments for Arabic */
+[dir="rtl"] .navbar-nav {
+    margin-left: auto;
+    margin-right: unset;
+}
+
+[dir="rtl"] .text-md-end {
+    text-align: left !important;
+}
+
+/* Benefits section icons */
+#benefits i {
+    transition: transform 0.3s;
+}
+
+#benefits i:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-brand img {
+        height: 50px;
+        width: 50px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+    }
+
+    #product-image {
+        max-height: 300px;
+    }
+}

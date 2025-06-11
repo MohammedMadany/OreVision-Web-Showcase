@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <!-- Define character encoding for proper text rendering -->
+    <meta charset="UTF-8">
+    <!-- Ensure responsive design for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO metadata for search engine visibility -->
+    <meta name="description" content="OreVision provides AI-powered ore sorting solutions and a B2B marketplace for minerals, enhancing efficiency and sustainability in Egypt and beyond.">
+    <meta name="keywords" content="ore sorting, AI, mining, minerals, OreVision Hub, Egypt">
+    <!-- Page title displayed in browser tab -->
+    <title>OreVision</title>
+    <!-- Favicon using the OreVision logo -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <!-- Bootstrap CSS for responsive grid and components (switches to RTL for Arabic) -->
+    <link id="bootstrap-css" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- AOS CSS for scroll animations -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome for icons (e.g., social media, benefits) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Roboto) for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS for OreVision styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <!-- Logo linking to homepage -->
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="OreVision Logo" height="70"></a>
+            <!-- Toggler for mobile navigation -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Navigation links aligned to the right -->
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#technology" data-i18n="technology">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#benefits" data-i18n="benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="hub.html" data-i18n="hub">OreVision Hub</a></li>
+                    <li class="nav-item"><a class="nav-link" href="detect.html" data-i18n="detect">Detect Minerals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.html" data-i18n="register">Register</a></li>
+                </ul>
+                <!-- Language switcher dropdown -->
+                <select id="language-switcher" class="form-select language-select ms-3">
+                    <option value="en">English</option>
+                    <option value="ar">العربية</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-center text-white d-flex align-items-center" style="background-image: url('images/hero-bg.jpg'); background-size: cover; height: 100vh;" data-aos="fade-in">
+        <div class="container">
+            <!-- Main headline with dynamic translation -->
+            <h1 class="display-4" data-i18n="hero_title">Revolutionizing Mining with AI-Powered Ore Sorting</h1>
+            <!-- Subtitle highlighting key benefits -->
+            <p class="lead" data-i18n="hero_subtitle">Boost efficiency, reduce waste, and maximize profits with OreVision.</p>
+            <!-- Call-to-action button linking to contact section -->
+            <a href="#contact" class="btn btn-primary btn-lg" data-i18n="contact_us">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4" data-i18n="about_title">About OreVision</h2>
+            <p data-i18n="about_text1">OreVision pioneers AI-powered ore sorting solutions, revolutionizing mining in Egypt and beyond. Our technology enhances efficiency, precision, and sustainability.</p>
+            <p data-i18n="about_text2">Founded in 2025 by Mohammed Madany, we focus on empowering SMEs with affordable, scalable sorting services.</p>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section id="technology" class="py-5 bg-dark text-white" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4" data-i18n="technology_title">Our Technology</h2>
+            <p data-i18n="technology_text1">Our AI-driven system uses artificial intelligence to sort ores/minerals like feldspar and quartz in real-time, ensuring high accuracy.</p>
+            <p data-i18n="technology_text2">Scalable and adaptable, our technology reduces costs and environmental impact, tailored for MENA’s mining challenges.</p>
+            <!-- How It Works subsection -->
+            <h3 class="mt-4" data-i18n="how_it_works">How It Works</h3>
+            <ol>
+                <li data-i18n="step1">Image Capture: Industrial cameras scan ores on a conveyor.</li>
+                <li data-i18n="step2">AI Analysis: Deep learning identifies valuable minerals.</li>
+                <li data-i18n="step3">Automated Sorting: Robots separate ores from waste.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-5 bg-light" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4" data-i18n="benefits_title">Why Choose OreVision</h2>
+            <div class="row text-center">
+                <!-- Benefit 1: Flexibility -->
+                <div class="col-md-3 mb-4">
+                    <i class="fas fa-cogs fa-3x mb-3" style="color: #ff4200;"></i>
+                    <h4 data-i18n="flexibility">Flexibility</h4>
+                    <p data-i18n="flexibility_text">Adapts to various mineral types and quarry sizes.</p>
+                </div>
+                <!-- Benefit 2: Productivity -->
+                <div class="col-md-3 mb-4">
+                    <i class="fas fa-rocket fa-3x mb-3" style="color: #ff4200;"></i>
+                    <h4 data-i18n="productivity">Productivity</h4>
+                    <p data-i18n="productivity_text">Increases sorting speed by up to 30%.</p>
+                </div>
+                <!-- Benefit 3: Quality -->
+                <div class="col-md-3 mb-4">
+                    <i class="fas fa-check-circle fa-3x mb-3" style="color: #ff4200;"></i>
+                    <h4 data-i18n="quality">Quality</h4>
+                    <p data-i18n="quality_text">Ensures high-purity mineral output.</p>
+                </div>
+                <!-- Benefit 4: Waste Prevention -->
+                <div class="col-md-3 mb-4">
+                    <i class="fas fa-recycle fa-3x mb-3" style="color: #ff4200;"></i>
+                    <h4 data-i18n="waste_prevention">Waste Prevention</h4>
+                    <p data-i18n="waste_prevention_text">Reduces material loss with precise sorting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-dark text-white" data-aos="fade-up">
+        <div class="container">
+            <h2 class="text-center mb-4" data-i18n="contact_title">Contact Us</h2>
+            <!-- Contact form using Formspree for submission -->
+            <form id="contact-form" action="https://formspree.io/f/xyzwqlbq" method="POST" class="contact-form">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="first_name" class="form-label" data-i18n="first_name">First Name*</label>
+                        <input type="text" class="form-control" id="first_name" name="first_name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="last_name" class="form-label" data-i18n="last_name">Last Name*</label>
+                        <input type="text" class="form-control" id="last_name" name="last_name" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label" data-i18n="email">Email*</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label" data-i18n="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="company" class="form-label" data-i18n="company">Company Name</label>
+                    <input type="text" class="form-control" id="company" name="company">
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label" data-i18n="country">Country/Region*</label>
+                    <select class="form-select" id="country" name="country" required>
+                        <option value="" data-i18n="select_country">Please Select</option>
+                            <option value="Egypt">Egypt</option>
+                            <option value="Saudi Arabia">Saudi Arabia</option>
+                            <option value="UAE">UAE</option>
+                            <option value="Morocco">Morocco</option>
+                            <option value="Sudan">Sudan</option>
+                            <option value="Algeria">Algeria</option>
+                            <option value="Tunisia">Tunisia</option>
+                            <option value="Jordan">Jordan</option>
+                            <option value="Palestine">Palestine</option>
+                            <option value="Iraq">Iraq</option>
+                            <option value="Syria">Syria</option>
+                            <option value="Libya">Libya</option>
+                            <option value="Nigeria">Nigeria</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label" data-i18n="message">Message*</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary btn-lg" data-i18n="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="row">
+             <!--   <div class="mt-3">
+                    <h5 class="text-center" data-i18n="our_location">Our Location</h5>
+                    <div id="footer-map" style="height: 300px; border-radius: 15px; overflow: hidden;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.123!2d31.2335!3d30.0444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0!2zMDDCsDAyJzM5LjgiTiAzMcKwMTQnMDAuNiJF!5e0!3m2!1sen!2seg!4v1636098400!5m2!1sen!2seg"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div> 
+                </div> -->
+                <div class="col-md-6">
+                    <h5 data-i18n="quick_links">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white" data-i18n="home">Home</a></li>
+                        <li><a href="#about" class="text-white" data-i18n="about">About</a></li>
+                        <li><a href="#technology" class="text-white" data-i18n="technology">Technology</a></li>
+                        <li><a href="hub.html" class="text-white" data-i18n="hub">OreVision Hub</a></li>
+                        <li><a href="#contact" class="text-white" data-i18n="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <h5 data-i18n="follow_us">Follow Us</h5>
+                    <a href="https://www.linkedin.com/company/orevision/" target="_blank" class="text-white me-2"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61571931276839" target="_blank" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/orevision/" target="_blank" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/orevision_eg" target="_blank" class="text-white"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="text-center mt-3">
+                <p data-i18n="copyright">© 2025 OreVision. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="btn back-to-top" data-i18n="back_to_top">Top</button>
+
+    <!-- Bootstrap JS for interactive components -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS for scroll animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS with smooth animation settings
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+    <!-- Custom JS for dynamic functionality -->
+    <script src="scripts.js"></script>
+    <script>
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const language = localStorage.getItem('language') || 'en';
+            updateLanguage(language);
+        });
+    </script>
+    <script>
+    // Parallax effect for hero section
+    window.addEventListener('scroll', function() {
+        const hero = document.querySelector('.hero-section');
+        const scrolled = window.pageYOffset;
+        hero.style.backgroundPositionY = `${scrolled * 0.5}px`;
+    });
+    </script>    
+    
+</body>
+</html>
