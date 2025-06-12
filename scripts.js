@@ -132,7 +132,7 @@ const products = [
     },
     {
         id: 6,
-        image: "images/Fluorite.jpg",
+        image: "images/fluorite.jpg",
         en: {
             name: "Fluorite",
             description: "Fluorite for metallurgy, ceramics, and chemical industries, ensuring high performance.",
